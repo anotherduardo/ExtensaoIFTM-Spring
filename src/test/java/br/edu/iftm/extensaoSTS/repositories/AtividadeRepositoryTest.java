@@ -30,14 +30,14 @@ public class AtividadeRepositoryTest {
 	
 	@Test
 	public void findByNome(){
-		List<Atividade> atividades = this.repo.findByNomeContaining("GDG");
+		List<Atividade> atividades = this.repo.findByNomeContainingIgnoreCase("GDG");
 		assertThat(atividades.size()).isEqualTo(1);
 
 	}
 	
 	@Test
 	public void find(){
-		List<Atividade> atividades = this.repo.findByNomeContaining("edu");
+		List<Atividade> atividades = this.repo.findByNomeContainingIgnoreCase("edu");
 		assertThat(atividades.size()).isEqualTo(0);
 	}
 

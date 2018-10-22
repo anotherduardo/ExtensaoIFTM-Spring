@@ -17,7 +17,7 @@ public interface AtividadeRepository extends JpaRepository<Atividade, Integer>{
 	
     //@Query("Select a from Atividade a where a.nome like %:nome%")
 	// Containing é convensão: Automaticamente faz um like na query.
-    public List<Atividade> findByNomeContaining(@Param("nome") String nome);
+    public List<Atividade> findByNomeContainingIgnoreCase(@Param("nome") String nome);
     
     
     /*public ResponseEntity<?> deleteAtividade();*/
